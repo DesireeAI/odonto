@@ -1,6 +1,6 @@
 [phases.setup]
-nixPkgs = ['python38']  # Ajuste para sua versão do Python
-aptPkgs = ['python3-pip']
+nixPkgs = ['python39', 'nodejs']  # Use Python 3.9 for Streamlit 1.45.1 compatibility
+aptPkgs = ['python3-pip', 'build-essential', 'libpq-dev', 'libjpeg-dev', 'zlib1g-dev', 'libpng-dev', 'libfreetype6-dev', 'libopenjp2-7-dev']
 
 [phases.install]
 cmds = ['pip install -r requirements.txt']
