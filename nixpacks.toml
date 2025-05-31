@@ -1,0 +1,12 @@
+[phases.setup]
+nixPkgs = ['python38']  # Ajuste para sua versão do Python
+aptPkgs = ['python3-pip']
+
+[phases.install]
+cmds = ['pip install -r requirements.txt']
+
+[phases.build]
+cmds = ['echo "Build complete"']
+
+[start]
+cmd = 'streamlit run main.py --server.port 8501 --server.headless true'
